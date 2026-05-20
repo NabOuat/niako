@@ -1,0 +1,52 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(npx tailwindcss *)",
+      "Bash(npm run *)",
+      "Bash(npm uninstall *)",
+      "Bash(node -e ' *)",
+      "WebSearch",
+      "WebFetch(domain:lottiefiles.com)",
+      "WebFetch(domain:www.dreamhost.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:miromiro.app)",
+      "WebFetch(domain:docs.sprocketrocket.co)",
+      "WebFetch(domain:developers.lottiefiles.com)",
+      "WebFetch(domain:thesvbd.github.io)",
+      "WebFetch(domain:www.geeksforgeeks.org)",
+      "WebFetch(domain:www.moonb.io)",
+      "WebFetch(domain:codepen.io)",
+      "WebFetch(domain:backpackforlaravel.com)",
+      "WebFetch(domain:creattie.com)",
+      "WebFetch(domain:lottie.host)",
+      "WebFetch(domain:docs.flutterflow.io)",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('lottie-world-map.json'\\)\\); print\\('world-map OK v='+str\\(d.get\\('v'\\)\\)\\)\")",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('lottie-bar-chart.json'\\)\\); print\\('bar-chart OK v='+str\\(d.get\\('v'\\)\\)\\)\")",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('lottie-workflow.json'\\)\\); print\\('workflow OK v='+str\\(d.get\\('v'\\)\\)\\)\")",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('lottie-team.json'\\)\\); print\\('team OK v='+str\\(d.get\\('v'\\)\\)\\)\")",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('lottie-hr.json'\\)\\); print\\('hr OK v='+str\\(d.get\\('v'\\)\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(open\\('lottie-world.json'\\)\\); print\\('world OK nm='+str\\(d.get\\('nm'\\)\\)\\)\")",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('lottie-chart.json'\\)\\); print\\('chart OK nm='+str\\(d.get\\('nm'\\)\\)\\)\")",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('lottie-wflow.json'\\)\\); print\\('wflow OK nm='+str\\(d.get\\('nm'\\)\\)\\)\")",
+      "WebFetch(domain:lottiefiles.github.io)",
+      "WebFetch(domain:assets3.lottiefiles.com)",
+      "WebFetch(domain:assets9.lottiefiles.com)",
+      "WebFetch(domain:assets2.lottiefiles.com)",
+      "WebFetch(domain:assets5.lottiefiles.com)",
+      "WebFetch(domain:assets4.lottiefiles.com)",
+      "WebFetch(domain:assets6.lottiefiles.com)",
+      "WebFetch(domain:assets1.lottiefiles.com)",
+      "WebFetch(domain:assets10.lottiefiles.com)",
+      "WebFetch(domain:assets7.lottiefiles.com)",
+      "WebFetch(domain:assets8.lottiefiles.com)",
+      "Bash(npm list *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\OUATTARA AFOR\\.claude\\projects\\c--Users-OUATTARA-AFOR-Desktop-Zone51-niakolabs\\memory"
+    ]
+  }
+}

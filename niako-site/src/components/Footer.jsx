@@ -1,5 +1,6 @@
 import NiakoLogo from './NiakoLogo';
 import LottieIcon from './LottieIcon';
+import { useTrack } from '../hooks/useTrack';
 
 const PRODUITS   = ['GIS & Géomatique', 'Applications Métier', 'Mobile & Terrain', 'Secteur Public'];
 const ENTREPRISE = ['À propos', 'Réalisations', 'Comment on travaille', 'Mentions légales'];
@@ -21,6 +22,7 @@ function IconFacebook() {
 }
 
 export default function Footer() {
+  const { trackWhatsApp, trackEmail } = useTrack();
   return (
     <footer className="border-t px-5 md:px-12 pt-16 pb-10"
       style={{ background: 'var(--surface-container-lowest)', borderColor: 'var(--outline-variant)' }}>
@@ -92,6 +94,7 @@ export default function Footer() {
 
             <a href="https://wa.me/2250749435171"
               target="_blank" rel="noopener noreferrer"
+              onClick={() => trackWhatsApp('footer')}
               className="inline-flex items-center gap-2 font-dm text-[14px] font-medium transition-colors duration-200"
               style={{ color: 'var(--on-surface-variant)' }}
               onMouseEnter={e => e.currentTarget.style.color = 'var(--amber)'}
@@ -102,6 +105,7 @@ export default function Footer() {
             </a>
 
             <a href="mailto:contact@niako.tech"
+              onClick={() => trackEmail('footer')}
               className="block font-mono text-[12px] font-semibold transition-colors duration-200"
               style={{ color: 'var(--primary)' }}
               onMouseEnter={e => e.currentTarget.style.color = 'var(--amber)'}

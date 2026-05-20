@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useTrack } from '../hooks/useTrack';
 import LottieIcon from './LottieIcon';
 
 // Icône WhatsApp
@@ -14,6 +15,7 @@ function WhatsAppIcon() {
 export default function CTA() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const { trackWhatsApp, trackEmail } = useTrack();
 
   return (
     <section id="contact" className="py-24 px-5 md:px-12 border-t"
@@ -93,6 +95,7 @@ export default function CTA() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                onClick={() => trackWhatsApp('cta_section')}
               >
                 <WhatsAppIcon />
                 Écrire sur WhatsApp
@@ -102,6 +105,7 @@ export default function CTA() {
               <a href="mailto:contact@niako.tech"
                 className="font-mono text-[12px] transition-colors duration-200"
                 style={{ color: 'var(--on-surface-variant)' }}
+                onClick={() => trackEmail('cta_section')}
                 onMouseEnter={e => e.currentTarget.style.color = 'var(--primary)'}
                 onMouseLeave={e => e.currentTarget.style.color = 'var(--on-surface-variant)'}
               >

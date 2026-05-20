@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import DashboardMockup from './DashboardMockup';
 import LottieIcon from './LottieIcon';
+import { useTrack } from '../hooks/useTrack';
 
 const HEADLINE = [
   { text: 'Des logiciels qui font', amber: false },
@@ -22,6 +23,7 @@ const DOMAIN_LOTTIES = {
 };
 
 export default function Hero() {
+  const { trackCTA, trackWhatsApp } = useTrack();
   return (
     <section className="relative min-h-screen flex items-center px-5 md:px-12 pt-16 overflow-hidden">
 
@@ -95,13 +97,14 @@ export default function Hero() {
             transition={{ duration: 0.45, delay: 0.52 }}
             className="flex flex-wrap gap-3 items-center"
           >
-            <a href="#réalisations" className="btn-primary">
+            <a href="#réalisations" className="btn-primary" onClick={() => trackCTA('voir_realisations')}>
               Voir nos réalisations
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden>
                 <path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
             <a href="#contact"
+              onClick={() => trackWhatsApp('hero')}
               className="font-mono text-[11px] font-semibold tracking-widest uppercase px-6 py-3.5 rounded-lg border transition-all duration-200"
               style={{ color: 'var(--on-surface-variant)', borderColor: 'var(--outline-variant)' }}
               onMouseEnter={e => { e.currentTarget.style.color = 'var(--on-surface)'; e.currentTarget.style.borderColor = 'var(--outline)'; }}
