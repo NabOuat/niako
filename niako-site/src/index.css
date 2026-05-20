@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+/* ══════════════════════════════════════════════
+   TOKENS — DARK
+   Fond obsidienne profond, surfaces à tonal layering,
+   bleu électrique réservé aux actions et preuves,
+   ambre Sahel pour les accents chauds identitaires.
+══════════════════════════════════════════════ */
+:root,
+html.dark {
+  --surface-container-lowest: #080c17;
+  --surface-container-low:    #0e1220;
+  --surface:                  #0b0f1c;
+  --surface-container:        #141829;
+  --surface-container-high:   #1c2135;
+  --surface-container-highest:#242a3e;
+  --surface-variant:          #242a3e;
+  --on-surface:               #eceffe;
+  --on-surface-variant:       #8b93b0;
+  --outline:                  #565e7c;
+  --outline-variant:          #232942;
+
+  /* Bleu Niako — confiance, compétence, action */
+  --primary:                  #5c7fff;
+  --primary-container:        #2d5ce8;
+  --on-primary:               #ffffff;
+  --on-primary-container:     #ffffff;
+  --primary-glow:             rgba(45,92,232,0.20);
+
+  /* Ambre Sahel — énergie, chaleur, identité africaine */
+  --amber:                    #ffb84d;
+  --amber-dim:                #e89500;
+  --amber-glow:               rgba(232,149,0,0.15);
+  --on-amber:                 #1a0e00;
+
+  /* Secondary */
+  --secondary:                #ffb95f;
+  --secondary-container:      #ee9800;
+
+  --background:               #080c17;
+  --on-background:            #eceffe;
+  --section-alt:              #0b0f1c;
+  --body-bg:                  #080c17;
+  --body-color:               #eceffe;
+
+  --text-gradient-from:       #7b9fff;
+  --text-gradient-to:         #2d5ce8;
+  --proof-color:              #5c7fff;
+  --proof-amber:              #ffb84d;
+
+  /* Ombres dark — subtiles, profondes */
+  --shadow-card:              0 1px 3px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.3);
+  --shadow-card-hover:        0 4px 6px rgba(0,0,0,0.5), 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(45,92,232,0.3);
+  --shadow-button:            0 2px 8px rgba(45,92,232,0.4);
+  --shadow-button-hover:      0 4px 20px rgba(45,92,232,0.55);
+}
+
+/* ══════════════════════════════════════════════
+   TOKENS — LIGHT
+   Fonds neutres chauds (gris pierre) — ZERO bleu dans les surfaces.
+   Textes quasi-noirs chauds — ZERO teinte bleue.
+   Bleu réservé aux boutons et liens uniquement.
+   Ambre sombre pour les accents sur fond clair.
+══════════════════════════════════════════════ */
+html.light {
+  /* Surfaces neutres chauds — pas un seul fond bleuté */
+  --surface-container-lowest: #ffffff;
+  --surface-container-low:    #f5f5f4;
+  --surface:                  #fafaf9;
+  --surface-container:        #f0efed;
+  --surface-container-high:   #e7e5e4;
+  --surface-container-highest:#d6d3d1;
+  --surface-variant:          #e4e2df;
+
+  /* Textes — neutres chauds, contraste WCAG AA+ */
+  --on-surface:               #1c1917;
+  --on-surface-variant:       #57534e;
+  --outline:                  #a8a29e;
+  --outline-variant:          #d6d3d1;
+
+  /* Bleu Niako — uniquement sur actions/liens, pas en fond */
+  --primary:                  #1d4ed8;
+  --primary-container:        #2563eb;
+  --on-primary:               #ffffff;
+  --on-primary-container:     #ffffff;
+  --primary-glow:             rgba(37,99,235,0.10);
+
+  /* Ambre Sahel — sombre pour lisibilité sur fond clair */
+  --amber:                    #b45309;
+  --amber-dim:                #92400e;
+  --amber-glow:               rgba(180,83,9,0.08);
+  --on-amber:                 #ffffff;
+
+  --secondary:                #b45309;
+  --secondary-container:      #d97706;
+
+  --background:               #fafaf9;
+  --on-background:            #1c1917;
+  --section-alt:              #f5f5f4;
+  --body-bg:                  #fafaf9;
+  --body-color:               #1c1917;
+
+  --text-gradient-from:       #2563eb;
+  --text-gradient-to:         #1d4ed8;
+  --proof-color:              #1d4ed8;
+  --proof-amber:              #b45309;
+
+  /* Ombres light — naturelles, pas colorées */
+  --shadow-card:              0 1px 3px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
+  --shadow-card-hover:        0 8px 28px rgba(0,0,0,0.11), 0 0 0 1px rgba(37,99,235,0.18);
+  --shadow-button:            0 1px 3px rgba(0,0,0,0.10), 0 2px 8px rgba(37,99,235,0.22);
+  --shadow-button-hover:      0 4px 16px rgba(37,99,235,0.32);
+}
+
+/* ══════════════════════════════════════════════
+   BASE
+══════════════════════════════════════════════ */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+
+  #root { width: 100%; min-height: 100vh; }
+
+  ::selection { background-color: #2d5ce8; color: #fff; }
+
+  :focus-visible {
+    outline: 2px solid #2d5ce8;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   UTILITIES
+══════════════════════════════════════════════ */
+@layer utilities {
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  html.light .noise-overlay { opacity: 0.015; }
+
+  /* Gradient bleu Niako */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--text-gradient-from) 0%, var(--text-gradient-to) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Gradient ambre Sahel — pour accents identitaires */
+  .text-amber-gradient {
+    background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dim) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Transition globale thème */
+  .theme-transition,
+  .theme-transition * {
+    transition:
+      background-color 0.35s ease,
+      border-color 0.35s ease,
+      color 0.35s ease,
+      box-shadow 0.35s ease !important;
+  }
+
+  /* Bouton primaire avec ombre portée */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-container);
+    color: var(--on-primary-container);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 14px 32px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-button);
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-button-hover);
+  }
+
+  .btn-primary:active { transform: translateY(0); }
+}
