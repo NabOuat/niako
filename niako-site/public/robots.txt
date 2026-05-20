@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://niako.tech/sitemap.xml
+Sitemap: https://niakolab.com/sitemap.xml
