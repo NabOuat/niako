@@ -202,16 +202,9 @@ function ProjectCard({ project, index }) {
       <h3 className="font-syne font-bold text-headline-md text-on-surface leading-tight">
         {project.title}
       </h3>
-      <p className="font-dm text-body-md text-on-surface-variant flex-1 leading-relaxed">
+      <p className="font-dm text-body-md text-on-surface-variant leading-relaxed">
         {project.description}
       </p>
-      {/* CTA neutre — exploration, pas pression commerciale */}
-      <span className="inline-flex items-center gap-1.5 font-mono text-label-caps text-on-surface-variant/50 group-hover:text-primary transition-colors duration-200">
-        En savoir plus
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-          <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </span>
     </motion.article>
   );
 }
