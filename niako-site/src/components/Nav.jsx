@@ -19,10 +19,8 @@ function ThemeToggle() {
     <button
       onClick={toggle}
       aria-label={isDark ? 'Passer en mode clair' : 'Passer en mode sombre'}
-      className="relative flex items-center justify-center w-9 h-9 rounded-full border transition-all duration-200"
+      className="btn-icon relative flex items-center justify-center w-9 h-9 rounded-full border"
       style={{ borderColor: 'var(--outline-variant)' }}
-      onMouseEnter={e => e.currentTarget.style.background = 'var(--surface-container)'}
-      onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
     >
       <AnimatePresence mode="wait" initial={false}>
         {isDark ? (
@@ -107,10 +105,7 @@ export default function Nav() {
             const isActive = activeSection === id;
             return (
               <a key={label} href={href}
-                className="relative font-mono text-[11px] font-semibold tracking-widest uppercase transition-colors duration-200"
-                style={{ color: isActive ? 'var(--primary)' : 'var(--on-surface-variant)' }}
-                onMouseEnter={e => { if (!isActive) e.currentTarget.style.color = 'var(--on-surface)'; }}
-                onMouseLeave={e => { if (!isActive) e.currentTarget.style.color = 'var(--on-surface-variant)'; }}
+                className={`nav-link relative font-mono text-[11px] font-semibold tracking-widest uppercase${isActive ? ' active' : ''}`}
               >
                 {label}
                 {/* Indicateur actif — trait bleu sous le lien */}
@@ -130,10 +125,7 @@ export default function Nav() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <a href="#contact"
-            className="hidden md:inline-flex font-mono text-[11px] font-semibold tracking-widest uppercase px-5 py-2 rounded border transition-all duration-200"
-            style={{ color: 'var(--primary)', borderColor: 'var(--primary-container)', opacity: 0.8 }}
-            onMouseEnter={e => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.background = 'var(--primary-glow)'; }}
-            onMouseLeave={e => { e.currentTarget.style.opacity = '0.8'; e.currentTarget.style.background = 'transparent'; }}
+            className="btn-nav-contact hidden md:inline-flex font-mono text-[11px] font-semibold tracking-widest uppercase px-5 py-2 rounded border"
           >
             Contact
           </a>
@@ -176,11 +168,8 @@ export default function Nav() {
             <div className="px-5 py-6 space-y-5">
               {LINKS.map(({ label, href }) => (
                 <a key={label} href={href}
-                  className="block font-mono text-[11px] font-semibold tracking-widest uppercase transition-colors"
-                  style={{ color: 'var(--on-surface-variant)' }}
+                  className="link-hover-primary block font-mono text-[11px] font-semibold tracking-widest uppercase"
                   onClick={() => setOpen(false)}
-                  onMouseEnter={e => e.currentTarget.style.color = 'var(--primary)'}
-                  onMouseLeave={e => e.currentTarget.style.color = 'var(--on-surface-variant)'}
                 >
                   {label}
                 </a>

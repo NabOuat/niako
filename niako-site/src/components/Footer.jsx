@@ -58,12 +58,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {PRODUITS.map((link) => (
                 <li key={link}>
-                  <a href="#"
-                    className="font-dm text-[14px] transition-colors duration-200"
-                    style={{ color: 'var(--on-surface-variant)' }}
-                    onMouseEnter={e => e.currentTarget.style.color = 'var(--amber)'}
-                    onMouseLeave={e => e.currentTarget.style.color = 'var(--on-surface-variant)'}
-                  >{link}</a>
+                  <a href="#" className="link-hover-amber font-dm text-[14px]">{link}</a>
                 </li>
               ))}
             </ul>
@@ -76,12 +71,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {ENTREPRISE.map((link) => (
                 <li key={link}>
-                  <a href="#"
-                    className="font-dm text-[14px] transition-colors duration-200"
-                    style={{ color: 'var(--on-surface-variant)' }}
-                    onMouseEnter={e => e.currentTarget.style.color = 'var(--amber)'}
-                    onMouseLeave={e => e.currentTarget.style.color = 'var(--on-surface-variant)'}
-                  >{link}</a>
+                  <a href="#" className="link-hover-amber font-dm text-[14px]">{link}</a>
                 </li>
               ))}
             </ul>
@@ -95,10 +85,7 @@ export default function Footer() {
             <a href="https://wa.me/2250749435171"
               target="_blank" rel="noopener noreferrer"
               onClick={() => trackWhatsApp('footer')}
-              className="inline-flex items-center gap-2 font-dm text-[14px] font-medium transition-colors duration-200"
-              style={{ color: 'var(--on-surface-variant)' }}
-              onMouseEnter={e => e.currentTarget.style.color = 'var(--amber)'}
-              onMouseLeave={e => e.currentTarget.style.color = 'var(--on-surface-variant)'}
+              className="link-hover-amber inline-flex items-center gap-2 font-dm text-[14px] font-medium"
             >
               <IconWhatsApp />
               +225 07 49 43 51 71
@@ -106,10 +93,7 @@ export default function Footer() {
 
             <a href="mailto:contact@niako.tech"
               onClick={() => trackEmail('footer')}
-              className="block font-mono text-[12px] font-semibold transition-colors duration-200"
-              style={{ color: 'var(--primary)' }}
-              onMouseEnter={e => e.currentTarget.style.color = 'var(--amber)'}
-              onMouseLeave={e => e.currentTarget.style.color = 'var(--primary)'}
+              className="link-hover-email block font-mono text-[12px] font-semibold"
             >
               contact@niako.tech
             </a>
@@ -121,20 +105,12 @@ export default function Footer() {
               </p>
               <a href="https://www.facebook.com/profile.php?id=61584227738448"
                 target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-dm text-[14px] transition-colors duration-200"
-                style={{ color: 'var(--on-surface-variant)' }}
-                onMouseEnter={e => e.currentTarget.style.color = 'var(--on-surface)'}
-                onMouseLeave={e => e.currentTarget.style.color = 'var(--on-surface-variant)'}
+                className="link-hover-surface inline-flex items-center gap-2 font-dm text-[14px]"
               >
                 <IconFacebook />
                 Facebook
               </a>
-              <a href="#"
-                className="block font-dm text-[14px] transition-colors duration-200"
-                style={{ color: 'var(--on-surface-variant)' }}
-                onMouseEnter={e => e.currentTarget.style.color = 'var(--on-surface)'}
-                onMouseLeave={e => e.currentTarget.style.color = 'var(--on-surface-variant)'}
-              >
+              <a href="#" className="link-hover-surface block font-dm text-[14px]">
                 GitHub
               </a>
             </div>

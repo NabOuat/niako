@@ -46,22 +46,8 @@ function Step({ step, index }) {
       initial={{ opacity: 0, y: 24 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative flex flex-col gap-4 p-6 rounded-xl border transition-all duration-300"
-      style={{
-        background: 'var(--surface-container-lowest)',
-        borderColor: 'var(--outline-variant)',
-        boxShadow: 'var(--shadow-card)',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.borderColor = 'var(--primary-container)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
-        e.currentTarget.style.transform = 'translateY(-3px)';
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.borderColor = 'var(--outline-variant)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-card)';
-        e.currentTarget.style.transform = 'translateY(0)';
-      }}
+      className="card-hover group relative flex flex-col gap-4 p-6 rounded-xl"
+      style={{ background: 'var(--surface-container-lowest)' }}
     >
       {/* Icône Lottie + numéro côte à côte */}
       <div className="flex items-center justify-between">

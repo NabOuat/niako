@@ -103,11 +103,8 @@ export default function CTA() {
 
               {/* Email — secondaire */}
               <a href="mailto:contact@niako.tech"
-                className="font-mono text-[12px] transition-colors duration-200"
-                style={{ color: 'var(--on-surface-variant)' }}
+                className="link-hover-primary font-mono text-[12px]"
                 onClick={() => trackEmail('cta_section')}
-                onMouseEnter={e => e.currentTarget.style.color = 'var(--primary)'}
-                onMouseLeave={e => e.currentTarget.style.color = 'var(--on-surface-variant)'}
               >
                 contact@niako.tech
               </a>

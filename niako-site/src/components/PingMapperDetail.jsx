@@ -37,10 +37,8 @@ export default function PingMapperDetail({ onClose }) {
           <button
             onClick={onClose}
             aria-label="Fermer"
-            className="absolute top-5 right-5 w-8 h-8 rounded-full border flex items-center justify-center transition-colors duration-200"
+            className="btn-icon absolute top-5 right-5 w-8 h-8 rounded-full border flex items-center justify-center"
             style={{ borderColor: 'var(--outline-variant)', color: 'var(--on-surface-variant)' }}
-            onMouseEnter={e => e.currentTarget.style.background = 'var(--surface-container)'}
-            onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
           >
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
               <path d="M1 1l10 10M11 1L1 11" />

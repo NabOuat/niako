@@ -105,20 +105,8 @@ function FeaturedCard({ project, onDetail }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.98 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
-      className="md:col-span-2 group relative rounded-md overflow-hidden transition-all duration-250"
-      style={{
-        background: 'linear-gradient(135deg, var(--surface-container) 0%, var(--surface-container-low) 100%)',
-        border: '1px solid var(--outline-variant)',
-        boxShadow: 'var(--shadow-card)',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.borderColor = 'var(--primary-container)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.borderColor = 'var(--outline-variant)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-card)';
-      }}
+      className="card-hover md:col-span-2 group relative rounded-md overflow-hidden"
+      style={{ background: 'linear-gradient(135deg, var(--surface-container) 0%, var(--surface-container-low) 100%)' }}
     >
       {/* Accent glow */}
       <div className="absolute top-0 right-0 w-64 h-64 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(59,111,240,0.12) 0%, transparent 70%)' }} />
@@ -155,10 +143,8 @@ function FeaturedCard({ project, onDetail }) {
           ))}
           <button
             onClick={onDetail}
-            className="ml-auto inline-flex items-center gap-1.5 font-mono text-label-caps px-3 py-1.5 rounded-full border transition-all duration-200"
+            className="ml-auto inline-flex items-center gap-1.5 font-mono text-label-caps px-3 py-1.5 rounded-full border opacity-100 hover:opacity-75 transition-opacity duration-200"
             style={{ color: 'var(--amber)', borderColor: 'var(--amber)', background: 'var(--amber-glow)' }}
-            onMouseEnter={e => e.currentTarget.style.opacity = '0.8'}
-            onMouseLeave={e => e.currentTarget.style.opacity = '1'}
           >
             Case study
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden>
@@ -179,22 +165,8 @@ function ProjectCard({ project, index }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 14, scale: 0.98 }}
       transition={{ duration: 0.3, delay: index * 0.05, ease: 'easeOut' }}
-      className="group rounded-md p-6 flex flex-col gap-4 transition-all duration-250"
-      style={{
-        background: 'var(--surface-container-low)',
-        border: '1px solid var(--outline-variant)',
-        boxShadow: 'var(--shadow-card)',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.borderColor = 'var(--primary-container)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
-        e.currentTarget.style.transform = 'translateY(-3px)';
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.borderColor = 'var(--outline-variant)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-card)';
-        e.currentTarget.style.transform = 'translateY(0)';
-      }}
+      className="card-hover group rounded-md p-6 flex flex-col gap-4"
+      style={{ background: 'var(--surface-container-low)' }}
     >
       <span className="self-start font-mono text-label-caps text-primary/70 bg-primary-container/10 border border-primary-container/20 px-2.5 py-1 rounded-full">
         {project.tag}

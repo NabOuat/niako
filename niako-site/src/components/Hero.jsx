@@ -105,10 +105,7 @@ export default function Hero() {
             </a>
             <a href="#contact"
               onClick={() => trackWhatsApp('hero')}
-              className="font-mono text-[11px] font-semibold tracking-widest uppercase px-6 py-3.5 rounded-lg border transition-all duration-200"
-              style={{ color: 'var(--on-surface-variant)', borderColor: 'var(--outline-variant)' }}
-              onMouseEnter={e => { e.currentTarget.style.color = 'var(--on-surface)'; e.currentTarget.style.borderColor = 'var(--outline)'; }}
-              onMouseLeave={e => { e.currentTarget.style.color = 'var(--on-surface-variant)'; e.currentTarget.style.borderColor = 'var(--outline-variant)'; }}
+              className="btn-outline font-mono text-[11px] font-semibold tracking-widest uppercase px-6 py-3.5 rounded-lg border"
             >
               Écrire à NIAKO →
             </a>

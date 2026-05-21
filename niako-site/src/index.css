@@ -219,4 +219,90 @@ html.light {
   }
 
   .btn-primary:active { transform: translateY(0); }
+
+  /* ── Hover utilitaires — remplacent tous les onMouseEnter/Leave inline ── */
+
+  /* Lien texte → ambre au hover */
+  .link-hover-amber {
+    color: var(--on-surface-variant);
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  .link-hover-amber:hover { color: var(--amber); }
+
+  /* Lien texte → primary au hover */
+  .link-hover-primary {
+    color: var(--on-surface-variant);
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  .link-hover-primary:hover { color: var(--primary); }
+
+  /* Lien texte → on-surface au hover */
+  .link-hover-surface {
+    color: var(--on-surface-variant);
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  .link-hover-surface:hover { color: var(--on-surface); }
+
+  /* Bouton outline secondaire (Hero, NotFound) */
+  .btn-outline {
+    color: var(--on-surface-variant);
+    border-color: var(--outline-variant);
+    transition: color 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-outline:hover {
+    color: var(--on-surface);
+    border-color: var(--outline);
+  }
+
+  /* Card avec hover lift + border glow */
+  .card-hover {
+    border: 1px solid var(--outline-variant);
+    box-shadow: var(--shadow-card);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .card-hover:hover {
+    border-color: var(--primary-container);
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-3px);
+  }
+
+  /* Bouton icône (ThemeToggle, close modal) */
+  .btn-icon {
+    transition: background 0.2s ease;
+    background: transparent;
+  }
+  .btn-icon:hover { background: var(--surface-container); }
+
+  /* Nav link active / inactive */
+  .nav-link {
+    color: var(--on-surface-variant);
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  .nav-link:hover { color: var(--on-surface); }
+  .nav-link.active { color: var(--primary); }
+
+  /* Bouton Contact navbar */
+  .btn-nav-contact {
+    color: var(--primary);
+    border-color: var(--primary-container);
+    opacity: 0.8;
+    transition: opacity 0.2s ease, background 0.2s ease;
+  }
+  .btn-nav-contact:hover {
+    opacity: 1;
+    background: var(--primary-glow);
+  }
+
+  /* Lien email primary */
+  .link-hover-email {
+    color: var(--primary);
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  .link-hover-email:hover { color: var(--amber); }
 }
